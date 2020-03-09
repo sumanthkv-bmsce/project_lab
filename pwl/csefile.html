@@ -1,0 +1,103 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link href="pics.css" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+</head>
+      
+      <body>
+          
+        <div class="menu-toggle" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="overlay"></div>
+        <div class="container">  
+            
+            <nav>
+                <h1 class="brand"><a href="https://bmsce.ac.in">BM<span>S</span>CE</a></h1>
+                <div class="main_menu">
+                <ul>
+                    <li><a href="#">Home</a></li>    
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Services</a>
+                      <div class="sub_menu">    
+                        <ul>
+                          <li><div class="one"><a href - "#">Novel</a></div></li>
+                          <li><div class="two"><a href - "#">Comics</a></div></li>
+                          <li><div class="three"><a href - "#">Computers</a></div></li>
+                        </ul>
+                      </div>             
+                    <li><a href ="logn.html">LogOut</a></li>
+                </ul>
+              </div>
+            </nav>
+            <div class="button_box2">
+            <form class="form-wrapper-2 cf">
+            <input type="text" placeholder="Search here..." required>
+            <button type="submit">Search</button>
+                </form>
+            </div>
+            <div class="images">
+            <div class='popular'>
+            <div><h1 class="fontMe">Popular</h1>
+                <img src="20,000%20Leagues%20Under%20the%20Sea.jpg" id="img_1"  onClick="getID(this.id)" value="1">
+                <img src="Algorithms%20to%20Live%20By.jpg" id="img_2" onClick="getID(this.id)" value="2">
+                <img src="Cloud%20Computing,%20A%20Practical%20Approach.jpg" id="img_3" onClick="getID(this.id)" value="3">
+                <img src="Learn%20Python%20the%20Hard%20Way.jpg" id="img_4" onClick="getID(this.id)" value="4">
+                
+            </div>
+             </div>  
+            <div class="favourites">
+                <div><h1 class="fontMe">Favourites</h1>
+                <img src="Applied%20Cryptography%20Protocols,%20Algorithms%20and%20Source%20Code%20in%20C,%202ed.jpg" id="img_1" value="5" onClick="getID(this.id)">
+                <img src="Java%20-%20The%20Complete%20Reference.jpg" id="img_2" onClick="getID(this.id)" value="6">
+                <img src="HTML%20and%20CSS%20Design%20and%20Build%20Websites.jpg" id="img_3" onClick="getID(this.id)" value="6">
+                <img src="Data%20Structures%20and%20Algorithms%20Made%20Easy%20Data%20Structures%20and%20Algorithmic%20Puzzles.jpg" id="img_4" onClick="getID(this.id)" value="8">
+                
+            </div>
+            </div>
+                
+                  <div class="reading">
+                <div><h1 class="fontMe">Reading</h1>
+                <img src="Hands-On%20Machine%20Learning%20with%20Scikit-Learn%20and%20Tensor%20Flow%20Concepts,%20Tools,%20and%20Techniques%20to%20Build%20Intelligent%20Systems.jpg" id="img_1" value="9" onClick="getID(this.id)">
+                <img src="finalback1.jpg" id="img_2" onClick="getID(this.id)" value="10">
+                <img src="Cloud%20Computing,%20A%20Practical%20Approach.jpg" id="img_3" onClick="getID(this.id)" value="11">
+                <img src="Learn%20Python%20the%20Hard%20Way.jpg" id="img_4" onClick="getID(this.id)" value="12">
+                
+            </div>
+            </div>
+            
+          </div>
+          </div>
+          
+          
+          <script>
+              var onClickMe = function(id) {
+                    var data = localStorage.getItem("object_name");
+                    localStorage.clear(); 
+                var value1 = JSON.parse(data).key1;
+                let tt = document.getElementById(id); 
+                alert(tt.getAttribute("value"));
+                var da = {
+                    'key2':'hello'
+                }
+                  localStorage.setItem("sample",JSON.stringify(da));
+                  
+                window.location.href="test1.html";
+              }
+              
+          var getID= function(id) {
+            let data = {'key1':id};
+              localStorage.setItem("object_name",JSON.stringify(data));
+              console.log(id);
+              onClickMe(id); 
+            }
+          
+          
+        
+                                                           
+          </script>  
+    </body>
+</html>
